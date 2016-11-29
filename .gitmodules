@@ -1,0 +1,3 @@
+[submodule "EasyMinerCenter"]
+	path = EasyMinerCenter
+	url = https://github.com/KIZI/EasyMiner-EasyMinerCenter.git
