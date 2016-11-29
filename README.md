@@ -13,13 +13,13 @@ http://easyminer.eu
 
 ## Repository content
 EasyMiner project is based on interconnection of fundamental components. Top components are available in this repository:
-- [EasyMinerCenter](./EasyMinerCenter)
+- **EasyMinerCenter**
   - main component for users interaction (web UI, RESTful API)
   - written in PHP/JavaScript 
-- [EasyMiner-Backend](./EasyMiner-Backend)
+- **EasyMiner-Backend**
   - combination of three basic backend services - data service, preprocessing service and miner service
   - written in Scala
-- [rCBA](./rCBA)
+- **rCBA**
   - CBA classifier for R (association rule pruning, building of classification models)
   - compiled version is available also in [CRAN repository](https://cran.r-project.org/web/packages/rCBA/index.html)
   - written in Java 8
