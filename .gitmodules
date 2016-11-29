@@ -4,3 +4,6 @@
 [submodule "EasyMiner-Backend"]
 	path = EasyMiner-Backend
 	url = https://github.com/KIZI/EasyMiner-Backend.git
+[submodule "rCBA"]
+	path = rCBA
+	url = https://github.com/jaroslav-kuchar/rCBA.git
