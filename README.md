@@ -2,29 +2,29 @@
 
 EasyMiner is an open source web-based project for data mining based on association rules.
 Key features:
-- association rule mining (based on arules package in R)
-- classification model building and rule prunning (based on algorithm rCBA)
-- prediction API
+- complete Prediction API (PAPI) - RESTful
 - interactive web UI working in all modern web browsers
-- RESTful API
+- association rule mining (based on Apriori algorithm/[arules](https://github.com/mhahsler/arules/) package in R)
+- classification model building and rule pruning (based on Classification based on Associations/CBA/ algorithm)
 
 ## Project web
 http://easyminer.eu
 
 ## Repository content (where do I see the issues and commits?)
-EasyMiner project is based on interconnection of fundamental components. Top components are available in this repository:
+EasyMiner project is composed of three independently developed components:
 - **[EasyMinerCenter](https://github.com/KIZI/EasyMiner-EasyMinerCenter)**
-  - main component for users interaction (web UI, RESTful API)
+  - user interaction (web UI, RESTful API)
   - written in PHP/JavaScript 
 - **[EasyMiner-Backend](https://github.com/KIZI/EasyMiner-Backend)**
-  - combination of three basic backend services - data service, preprocessing service and miner service
+  - data manipulation and handling of mining tasks
+  - three services: data service, preprocessing service and miner service
   - written in Scala
 - **[rCBA](https://github.com/jaroslav-kuchar/rCBA)**
-  - CBA classifier for R (association rule pruning, building of classification models)
+  - Implementation of the CBA algorithm used for rule pruning and building of classification models
   - compiled version is available also in [CRAN repository](https://cran.r-project.org/web/packages/rCBA/index.html)
   - written in Java 8
 
-For clone of its content, do not forget to clone also all linked submodules (recursively). You can run the command:
+When cloning project content, do not forget to clone also all the linked submodules (recursively) with:
 ```git
  git clone --recursive https://github.com/KIZI/EasyMiner.git 
 ```
