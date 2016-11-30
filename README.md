@@ -13,13 +13,13 @@ http://easyminer.eu
 
 ## Repository content
 EasyMiner project is based on interconnection of fundamental components. Top components are available in this repository:
-- **EasyMinerCenter**
+- **[EasyMinerCenter](https://github.com/KIZI/EasyMiner-EasyMinerCenter)**
   - main component for users interaction (web UI, RESTful API)
   - written in PHP/JavaScript 
-- **EasyMiner-Backend**
+- **[EasyMiner-Backend](https://github.com/KIZI/EasyMiner-Backend)**
   - combination of three basic backend services - data service, preprocessing service and miner service
   - written in Scala
-- **rCBA**
+- **[rCBA](https://github.com/jaroslav-kuchar/rCBA)**
   - CBA classifier for R (association rule pruning, building of classification models)
   - compiled version is available also in [CRAN repository](https://cran.r-project.org/web/packages/rCBA/index.html)
   - written in Java 8
@@ -28,7 +28,13 @@ For clone of its content, do not forget to clone also all linked submodules (rec
 ```git
  git clone --recursive https://github.com/KIZI/EasyMiner.git 
 ```
+## Issue tracking
+EasyMiner is composed of three components, which are maintained separately. Before posting an issue, please select the right issue tracker. 
+- Issues related to the user interface: [https://github.com/KIZI/EasyMiner-EasyMinerCenter/issues](https://github.com/KIZI/EasyMiner-EasyMinerCenter/issues)
+- Issues related to data handling and processing:  [https://github.com/KIZI/EasyMiner-Backend/issues](https://github.com/KIZI/EasyMiner-Backend/issues)
+- Issues related to the rule learning and pruning algorithm: [https://github.com/jaroslav-kuchar/rCBA/issues](https://github.com/jaroslav-kuchar/rCBA/issues)
 
+If you are not sure which one to pick, don't worry, your issue will be migrated to the right repository.
 ## License
 EasyMiner components are licensed under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0). 
 
