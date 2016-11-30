@@ -24,7 +24,7 @@ EasyMiner project is composed of three independently developed components:
   - compiled version is available also in [CRAN repository](https://cran.r-project.org/web/packages/rCBA/index.html)
   - written in Java 8
 
-When cloning project content, do not forget to clone also all the linked submodules (recursively) with:
+When cloning project content do not forget to clone also all the linked submodules (recursively) with:
 ```git
  git clone --recursive https://github.com/KIZI/EasyMiner.git 
 ```
