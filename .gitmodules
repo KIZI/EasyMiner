@@ -7,3 +7,6 @@
 [submodule "rCBA"]
 	path = rCBA
 	url = https://github.com/jaroslav-kuchar/rCBA.git
+[submodule "Evaluation"]
+	path = Evaluation
+	url = https://github.com/KIZI/EasyMiner-Evaluation.git
