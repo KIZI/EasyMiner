@@ -11,7 +11,7 @@ Key features:
 ## Project web
 http://easyminer.eu
 
-## Repository content
+## Repository content (where do I see the issues and commits?)
 EasyMiner project is based on interconnection of fundamental components. Top components are available in this repository:
 - **[EasyMinerCenter](https://github.com/KIZI/EasyMiner-EasyMinerCenter)**
   - main component for users interaction (web UI, RESTful API)
