@@ -21,7 +21,7 @@ EasyMiner project is composed of three independently developed components:
   - written in Scala
 - **[rCBA](https://github.com/jaroslav-kuchar/rCBA)**
   - Implementation of the CBA algorithm used for rule pruning and building of classification models
-  - compiled version is available also in [CRAN repository](https://cran.r-project.org/web/packages/rCBA/index.html)
+  - compiled version is available also in [CRAN repository](https://cran.r-project.org/package=rCBA)
   - written in Java 8
 
 When cloning project content do not forget to clone also all the linked submodules (recursively) with:
