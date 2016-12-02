@@ -52,10 +52,10 @@ HTTP_SERVER_ADDR=<docker-server>
 docker network create easyminer
 docker pull mysql:5.7
 docker run --name easyminer-mysql -e MYSQL_ROOT_PASSWORD=root --network easyminer -d mysql:5.7
-docker build -t easyminer-frontend https://github.com/KIZI/EasyMiner-EasyMinerCenter.git#:docker
-docker run -d -p 8894:80 --name easyminer-frontend -e HTTP_SERVER_NAME="$HTTP_SERVER_ADDR:8894" --network easyminer easyminer-frontend
-docker build -t easyminer-backend https://github.com/KIZI/EasyMiner-Backend.git#:docker
-docker run -d -p 8893:8893 -p 8891:8891 -p 8892:8892 --name easyminer-backend -e EM_USER_ENDPOINT=http://easyminer-frontend/easyminercenter --network easyminer easyminer-backend
+pull kizi/easyminer-frontend:v2.4
+docker run -d -p 8894:80 --name easyminer-frontend -e HTTP_SERVER_NAME="$HTTP_SERVER_ADDR:8894" --network easyminer kizi/easyminer-frontend:v2.4
+docker pull kizi/easyminer-backend:v2.4
+docker run -d -p 8893:8893 -p 8891:8891 -p 8892:8892 --name easyminer-backend -e EM_USER_ENDPOINT=http://easyminer-frontend/easyminercenter --network easyminer kizi/easyminer-backend:v2.4
 ```
 
 * Web GUI: http://\<docker-server\>:8894/easyminercenter
