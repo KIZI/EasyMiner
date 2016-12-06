@@ -20,7 +20,7 @@ EasyMiner/R project is composed of three independently developed components:
   - data manipulation and handling of mining tasks
   - three services: data service, preprocessing service and miner service
   - written in Scala
-- **[rCBA](https://github.com/jaroslav-kuchar/rCBA)**
+- **[rCBA](https://github.com/jaroslav-kuchar/rCBA)** [![Build Status](https://travis-ci.org/jaroslav-kuchar/rCBA.svg?branch=master)](https://travis-ci.org/jaroslav-kuchar/rCBA)
   - implementation of the CBA algorithm used for rule pruning and building of classification models
   - compiled version is available also in [CRAN repository](https://cran.r-project.org/package=rCBA)
   - written in Java 8
