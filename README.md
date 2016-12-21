@@ -46,7 +46,7 @@ Requirements: Docker 1.12+
 
 ```bash
 #!/bin/bash
-#user inputs
+# HEADS UP: docker-server is IP address returned by ifconfig, DO NOT USE localhost ! 
 HTTP_SERVER_ADDR=<docker-server>
 
 #commands
@@ -61,7 +61,7 @@ docker run -d -p 8893:8893 -p 8891:8891 -p 8892:8892 --name easyminer-backend -e
 
 * Web GUI: http://\<docker-server\>:8894/easyminercenter
 * Frontend re-install page: http://\<docker-server\>:8894/easyminercenter/install (password: 12345)
-
+* HEADS UP: Use IP address for  docker-server, NOT localhost! Using localhost will block crossite scripting, eventually leading to error
 
 ### Additional information
 
