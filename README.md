@@ -57,6 +57,8 @@ docker pull kizi/easyminer-frontend:v2.4
 docker run -d -p 8894:80 --name easyminer-frontend -e HTTP_SERVER_NAME="$HTTP_SERVER_ADDR:8894" --network easyminer kizi/easyminer-frontend:v2.4
 docker pull kizi/easyminer-backend:v2.4
 docker run -d -p 8893:8893 -p 8891:8891 -p 8892:8892 --name easyminer-backend -e EM_USER_ENDPOINT=http://easyminer-frontend/easyminercenter --network easyminer kizi/easyminer-backend:v2.4
+docker pull kizi/easyminer-scorer:v2.4
+docker run -d -p 8080:8080 --name easyminer-scorer --network easyminer kizi/easyminer-scorer:v2.4
 ```
 
 * Web GUI: http://\<docker-server\>:8894/easyminercenter
