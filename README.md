@@ -24,6 +24,9 @@ EasyMiner/R project is composed of three independently developed components:
   - implementation of the CBA algorithm used for rule pruning and building of classification models
   - compiled version is available also in [CRAN repository](https://cran.r-project.org/package=rCBA)
   - written in Java 8
+- **[EasyMiner-Scorer](https://github.com/KIZI/EasyMiner-Scorer)**
+  - classification scorer
+  - written in Java 8
 - **[Evaluation](https://github.com/KIZI/EasyMiner-Evaluation)**
   - evaluation framework for EasyMiner
   - covers 40 UCI datasets
@@ -40,7 +43,7 @@ This is an installation package of the Easyminer/R bundle for the docker environ
 
 ### EasyMiner with R backend
 
-Note: The HTTP_SERVER_ADDR has to contain an address to a **docker host** that is reachable from both any docker container and your internet browser.
+:grey_exclamation: Note: The HTTP_SERVER_ADDR has to contain an address to a **docker host** that is reachable from both any docker container and your internet browser.
 
 Requirements: Docker 1.12+
 
@@ -61,8 +64,9 @@ docker pull kizi/easyminer-scorer:v2.4
 docker run -d -p 8080:8080 --name easyminer-scorer --network easyminer kizi/easyminer-scorer:v2.4
 ```
 
-* Web GUI: http://\<docker-server\>:8894/easyminercenter
-* Frontend re-install page: http://\<docker-server\>:8894/easyminercenter/install (password: 12345)
+* Web GUI: **http://\<docker-server\>:8894/easyminercenter**
+* Frontend re-install page: *http://\<docker-server\>:8894/easyminercenter/install* (password: 12345)
+* Frontend API endpoint: **http://\<docker-server\>:8894/easyminercenter/api**
 * HEADS UP: Use IP address for  docker-server, NOT localhost! Using localhost will block crossite scripting, eventually leading to error
 
 ### Additional information
@@ -75,10 +79,11 @@ REST API endpoints are accessible on:
 * http://\<docker-server\>:8894/easyminercenter/api - easyminer central service 
 
 ## Issue tracking
-EasyMiner/R is composed of three components, which are maintained separately. Before posting an issue, please select the right issue tracker. 
+EasyMiner/R is composed of four components, which are maintained separately. Before posting an issue, please select the right issue tracker. 
 - Issues related to the user interface: [https://github.com/KIZI/EasyMiner-EasyMinerCenter/issues](https://github.com/KIZI/EasyMiner-EasyMinerCenter/issues)
 - Issues related to data handling and processing:  [https://github.com/KIZI/EasyMiner-Backend/issues](https://github.com/KIZI/EasyMiner-Backend/issues)
 - Issues related to the rule learning and pruning algorithm: [https://github.com/jaroslav-kuchar/rCBA/issues](https://github.com/jaroslav-kuchar/rCBA/issues)
+- Issues related to classification scorer:  [https://github.com/KIZI/EasyMiner-Scorer/issues](https://github.com/KIZI/EasyMiner-Scorer/issues)
 
 If you are not sure which one to pick, don't worry, your issue will be migrated to the right repository.
 ## License
