@@ -10,3 +10,6 @@
 [submodule "Evaluation"]
 	path = Evaluation
 	url = https://github.com/KIZI/EasyMiner-Evaluation.git
+[submodule "EasyMiner-Scorer"]
+	path = EasyMiner-Scorer
+	url = https://github.com/KIZI/EasyMiner-Scorer.git
