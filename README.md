@@ -27,7 +27,7 @@ EasyMiner/R project is composed of three independently developed components:
 - **[EasyMiner-Scorer](https://github.com/KIZI/EasyMiner-Scorer)**
   - classification scorer
   - written in Java 8
-- **[Evaluation](https://github.com/KIZI/EasyMiner-Evaluation)**
+- **[Evaluation](https://github.com/KIZI/EasyMiner-Evaluation)** [![Build Status](https://travis-ci.org/KIZI/EasyMiner-Evaluation.svg?branch=master)](https://travis-ci.org/KIZI/EasyMiner-Evaluation)
   - evaluation framework for EasyMiner
   - covers 40 UCI datasets
   - written in Python
