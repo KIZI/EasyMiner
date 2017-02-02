@@ -8,6 +8,9 @@ Key features:
 - classification model building and rule pruning (based on Classification based on Associations/CBA/ algorithm)
 
 As a complement to EasyMiner/R, there is also a proprietary on-demand version of EasyMiner based on Apache Spark/Hadoop.
+
+[![Build Status](https://travis-ci.org/KIZI/EasyMiner-Evaluation.svg?branch=master)](https://travis-ci.org/KIZI/EasyMiner-Evaluation)
+
 ## Project web
 http://easyminer.eu
 
