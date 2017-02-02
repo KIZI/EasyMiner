@@ -51,6 +51,10 @@ Requirements: Docker 1.12+
 #!/bin/bash
 # HEADS UP: docker-server is IP address returned by ifconfig, DO NOT USE localhost ! 
 HTTP_SERVER_ADDR=<docker-server>
+# Set automatically (works if there is only one interface)
+# HTTP_SERVER_ADDR=$(ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')
+# Set automatically (requires ip tool installed)
+# HTTP_SERVER_ADDR=$(ip route get 8.8.8.8 | awk '/8.8.8.8/ {print $NF}')
 
 #commands
 docker network create easyminer
