@@ -46,27 +46,16 @@ This is an installation package of the Easyminer/R bundle for the docker environ
 
 ### EasyMiner with R backend
 
-:grey_exclamation: Note: The HTTP_SERVER_ADDR has to contain an address to a **docker host** that is reachable from both any docker container and your internet browser.
-
 Requirements: Docker 1.12+
 
 ```bash
 #!/bin/bash
-# HEADS UP: docker-server is IP address returned by ifconfig, DO NOT USE localhost ! 
-HTTP_SERVER_ADDR=<docker-server>
-# Set automatically (requires ip tool installed)
-# HTTP_SERVER_ADDR=$(ip route get 8.8.8.8 | awk '/8.8.8.8/ {print $NF}')
-# Alternative: Set automatically (works if there is only one interface)
-# HTTP_SERVER_ADDR=$(ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')
 
-
-
-#commands
 docker network create easyminer
 docker pull mariadb:10
 docker run --name easyminer-mysql -e MYSQL_ROOT_PASSWORD=root --network easyminer -d mariadb:10
 docker pull kizi/easyminer-frontend:v2.4
-docker run -d -p 8894:80 --name easyminer-frontend -e HTTP_SERVER_NAME="$HTTP_SERVER_ADDR:8894" --network easyminer kizi/easyminer-frontend:v2.4
+docker run -d -p 8894:80 --name easyminer-frontend --network easyminer kizi/easyminer-frontend:v2.4
 docker pull kizi/easyminer-backend:v2.4
 docker run -d -p 8893:8893 -p 8891:8891 -p 8892:8892 --name easyminer-backend -e EM_USER_ENDPOINT=http://easyminer-frontend/easyminercenter --network easyminer kizi/easyminer-backend:v2.4
 docker pull kizi/easyminer-scorer:v2.4
@@ -76,7 +65,7 @@ docker run -d -p 8080:8080 --name easyminer-scorer --network easyminer kizi/easy
 * Web GUI: **http://\<docker-server\>:8894/easyminercenter**
 * Frontend re-install page: *http://\<docker-server\>:8894/easyminercenter/install* (password: 12345)
 * Frontend API endpoint: **http://\<docker-server\>:8894/easyminercenter/api**
-* HEADS UP: Use IP address for  docker-server, NOT localhost! Using localhost will block crossite scripting, eventually leading to error
+* HEADS UP: Use IP address or URL for docker-server, NOT localhost! Using localhost will block crossite scripting, eventually leading to error
 
 ### Additional information
 
