@@ -66,7 +66,7 @@ docker run -d -p 8080:8080 --name easyminer-scorer --network easyminer kizi/easy
 * Frontend re-install page: *http://\<docker-server\>:8894/easyminercenter/install* (password: 12345)
 * Frontend API endpoint: **http://\<docker-server\>:8894/easyminercenter/api**
 * HEADS UP: Use IP address or URL for docker-server, NOT localhost! Using localhost will block crossite scripting, eventually leading to error
-
+* HEADS UP: If you  run EasyMiner in virtual machine, use Bridged adapter (not NAT)
 ### Additional information
 
 REST API endpoints are accessible on:
