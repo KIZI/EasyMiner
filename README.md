@@ -34,7 +34,7 @@ EasyMiner/R project is composed of three independently developed components:
   - evaluation framework for EasyMiner
   - covers 36 UCI datasets
   - written in Python
-- ** [Benchmark](https://github.com/KIZI/EasyMiner-Benchmark) 
+- **[Benchmark](https://github.com/KIZI/EasyMiner-Benchmark)**
   - benchmark framework for EasyMiner, Sci-kit and Weka
   - covers 36 UCI datasets
   - written in Python and Java
