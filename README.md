@@ -32,9 +32,13 @@ EasyMiner/R project is composed of three independently developed components:
   - written in Java 8
 - **[Evaluation](https://github.com/KIZI/EasyMiner-Evaluation)** [![Build Status](https://travis-ci.org/KIZI/EasyMiner-Evaluation.svg?branch=master)](https://travis-ci.org/KIZI/EasyMiner-Evaluation)
   - evaluation framework for EasyMiner
-  - covers 40 UCI datasets
+  - covers 36 UCI datasets
   - written in Python
-
+** [Benchmark](https://github.com/KIZI/EasyMiner-Benchmark) 
+  - benchmark framework for EasyMiner, Sci-kit and Weka
+  - covers 36 UCI datasets
+  - written in Python and Java
+  
 When cloning project content do not forget to clone also all the linked submodules (recursively) with:
 ```git
  git clone --recursive https://github.com/KIZI/EasyMiner.git 
