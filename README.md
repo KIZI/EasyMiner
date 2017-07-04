@@ -10,15 +10,11 @@ Key features:
 As a complement to EasyMiner/R, there is also a proprietary on-demand version of EasyMiner based on Apache Spark/Hadoop.
 
 [![Build Status](https://travis-ci.org/KIZI/EasyMiner-Evaluation.svg?branch=master)](https://travis-ci.org/KIZI/EasyMiner-Evaluation)
-```diff
--- Note that as of July 2017 the Travis CI integration status is somewhat unstable due to updates in Travis CI Linux images used. In practice, this means that if you see Build failing status, there is nothing wrong with the code and the
-``` 
+Note that as of July 2017 the Travis CI integration status is somewhat unstable due to updates in Travis CI Linux images used. In practice, this means that if you see Build failing status, there is nothing wrong with the code and the
 ```diff
 ++ installation can complete successfully
 ```
-```diff
--- on your machine. We are working to resolve this issue.
-```
+on your machine. We are working to resolve this issue.
 
 
 ## Project web
