@@ -1,6 +1,7 @@
 [submodule "EasyMinerCenter"]
 	path = EasyMinerCenter
 	url = https://github.com/KIZI/EasyMiner-EasyMinerCenter.git
+	branch = v2.4
 [submodule "EasyMiner-Backend"]
 	path = EasyMiner-Backend
 	url = https://github.com/KIZI/EasyMiner-Backend.git
