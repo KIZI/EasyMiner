@@ -51,6 +51,19 @@ This is an installation package of the Easyminer/R bundle for the docker environ
 
 ### EasyMiner with R backend
 
+Installation using Docker compose (recommended):
+
+Requirements: Docker compose 1.12+, Docker 1.12+
+
+Download docker-compose.yml from this repository and at same directory run following commands:
+
+```bash
+docker-compose pull
+docker-compose up --force-recreate -d easyminer
+```
+
+Instalation without Docker compose (alternative):
+
 Requirements: Docker 1.12+
 
 ```bash
@@ -66,13 +79,13 @@ docker run -d -p 8893:8893 -p 8891:8891 -p 8892:8892 --name easyminer-backend -e
 docker pull kizi/easyminer-scorer:v2.4
 docker run -d -p 8080:8080 --name easyminer-scorer --network easyminer kizi/easyminer-scorer:v2.4
 ```
+### Additional information
 
 * Web GUI: **http://\<docker-server\>:8894/easyminercenter**
 * Frontend re-install page: *http://\<docker-server\>:8894/easyminercenter/install* (password: 12345)
 * Frontend API endpoint: **http://\<docker-server\>:8894/easyminercenter/api**
 * HEADS UP: Use IP address or URL for docker-server, NOT localhost! Using localhost will block crossite scripting, eventually leading to error
 * HEADS UP: If you  run EasyMiner in virtual machine, use Bridged adapter (not NAT)
-### Additional information
 
 REST API endpoints are accessible on:
 
