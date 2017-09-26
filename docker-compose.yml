@@ -5,6 +5,7 @@ services:
     image: mariadb:10
     environment:
       - MYSQL_ROOT_PASSWORD=root
+    command: mysqld --sql_mode=""
     healthcheck:
         test: "mysql --host=easyminer-mysql --user=root --password=root  --execute='show databases' "
         interval: 15s
