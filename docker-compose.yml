@@ -1,0 +1,67 @@
+version: "2.1"
+services:
+  easyminer-mysql:
+    container_name: easyminer-mysql
+    image: mariadb:10
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    command: mysqld --sql_mode=""
+    healthcheck:
+        test: "mysql --host=easyminer-mysql --user=root --password=root  --execute='show databases' "
+        interval: 15s
+        retries: 5
+  
+  easyminer-frontend:
+    container_name: easyminer-frontend
+    image: kizi/easyminer-frontend:v2.4
+    ports:
+      - "8894:80"
+    healthcheck:
+      test: "curl -f http://easyminer-frontend/easyminercenter"
+      interval: 30s
+      retries: 5  
+    depends_on:
+      easyminer-mysql:
+        condition: service_healthy 
+      easyminer-scorer:
+        condition: service_healthy     
+  
+  easyminer-backend:
+    container_name: easyminer-backend
+    image: kizi/easyminer-backend:v2.4
+    ports:
+      - "8891:8891"
+      - "8892:8892"
+      - "8893:8893"
+    environment:
+      - EM_USER_ENDPOINT=http://easyminer-frontend/easyminercenter
+    healthcheck:
+      test: "curl -f http://localhost:8891/easyminer-data/index.html && curl -f http://localhost:8892/easyminer-preprocessing/index.html && curl -f http://localhost:8893/easyminer-miner/index.html"
+      interval: 30s
+      retries: 5  
+    depends_on:
+      easyminer-frontend:
+        condition: service_healthy 
+
+  easyminer-scorer:
+    container_name: easyminer-scorer
+    image: kizi/easyminer-scorer:v2.4
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: "curl -f http://localhost:8080/swagger-ui.html"
+      interval: 30s
+      retries: 5
+
+  easyminer:
+    image: busybox:1
+    command: /bin/true
+    depends_on:
+      easyminer-frontend:
+        condition: service_healthy 
+      easyminer-backend:
+        condition: service_healthy 
+      easyminer-scorer:
+        condition: service_healthy 
+      easyminer-mysql:  
+        condition: service_healthy      
