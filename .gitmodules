@@ -10,3 +10,6 @@
 [submodule "EasyMiner-Scorer"]
 	path = EasyMiner-Scorer
 	url = https://github.com/KIZI/EasyMiner-Scorer.git
+[submodule "EasyMinerCenter"]
+	path = EasyMinerCenter
+	url = https://github.com/KIZI/EasyMiner-EasyMinerCenter.git
