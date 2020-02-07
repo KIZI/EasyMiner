@@ -13,7 +13,7 @@ services:
   
   easyminer-frontend:
     container_name: easyminer-frontend
-    image: kizi/easyminer-frontend:v2.4
+    image: kizi/easyminer-frontend:v2.7
     ports:
       - "8894:80"
     healthcheck:
