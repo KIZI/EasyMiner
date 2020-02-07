@@ -72,8 +72,8 @@ Requirements: Docker 1.12+
 docker network create easyminer
 docker pull mariadb:10
 docker run --name easyminer-mysql -e MYSQL_ROOT_PASSWORD=root --network easyminer -d mariadb:10 --sql-mode=""
-docker pull kizi/easyminer-frontend:v2.4
-docker run -d -p 8894:80 --name easyminer-frontend --network easyminer kizi/easyminer-frontend:v2.4
+docker pull kizi/easyminer-frontend:v2.7
+docker run -d -p 8894:80 --name easyminer-frontend --network easyminer kizi/easyminer-frontend:v2.7
 docker pull kizi/easyminer-backend:v2.4
 docker run -d -p 8893:8893 -p 8891:8891 -p 8892:8892 --name easyminer-backend -e EM_USER_ENDPOINT=http://easyminer-frontend/easyminercenter --network easyminer kizi/easyminer-backend:v2.4
 docker pull kizi/easyminer-scorer:v2.4
